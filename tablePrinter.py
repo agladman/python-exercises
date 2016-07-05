@@ -10,7 +10,7 @@ def printTable(tableData):
     # capture the colWidths to use later in .rjust()
     # correct result should be [8, 5, 5]
     for i in range(len(tableData)):
-        colWidths[i] = len(max(tableData[i]))
+        colWidths[i] = (max(tableData[i], key=len))
 
 
     return colWidths # remove this line and lines 18 and 20 once this part is working
