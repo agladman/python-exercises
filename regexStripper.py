@@ -9,23 +9,25 @@ function will be removed from the string."""
 
 import re
 
-def reStrip(s1, s2):
-    if s2 == '': # no second argument passed
-        stripRegex = re.compile(r'[^\s]*')
+def regex_strip(my_text, chars=None):
+    if not chars:
+        x = r'\s'
     else:
-        x = '[^%s]*' % (s2) # could be improved by ignoring case?
-        stripRegex = re.compile(x)
-    # return output
-    chars = stripRegex.findall(s1)
-    printChars = ''
-    for ch in chars:
-        printChars += ch
-    return printChars
+        x = prep_for_regex(chars)
+    return re.sub(r'^' + x + '*(.*?)' + x + '*$', r'\1', my_text, re.DOTALL)
 
-def getText():
+def prep_for_regex(chars):
+    needs_escape = set('.^$*+?{}[]\|()')
+    for ch in chars:
+        if ch in needs_escape:
+            ch = '\\' + ch
+    chars = '[' + chars + ']'
+    return chars
+
+def get_text():
     return str(input('Enter some text: '))
 
-def getStrip():
-    return str(input('What do you want to remove? (Leave blank to strip just spaces.) '))
+def get_chars():
+    return str(input('What do you want to remove? (Leave blank for whitespace.) '))
 
-print(reStrip(getText(), getStrip()))
+print(regex_strip(get_text(), get_chars()))
