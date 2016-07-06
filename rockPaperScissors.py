@@ -15,19 +15,31 @@ insults = ['cunt', 'motherfucker', 'wanker', 'piss stain', 'shit for brains', 'c
 exclamations = ['Shit!', 'Fuck!', 'Piss!', 'Balls!', 'Arse!']
 adjecfuckingtives = ['fucking', 'shitting', 'pissing', 'sodding', 'pigging', 'motherfucking', 'bloody']
 
+def swear(listname):
+    return choice(listname)
+
 def compChoose():
     n = randint(1,3)
     return choices[str(n)]
 
 def playerChoose():
     while True:
-        print('\nChoose rock (1), paper (2) or scissors (3): ', end = '')
-        n = input()
-        if n in choices.keys():
-            return choices[n]
+        try:
+            n = input('Choose rock (1), paper (2) or scissors (3): ')
+            return choices[n] if n in choices
             break
-        else:
-            print('\nInvalid %s choice, you %s. Enter 1, 2 or 3 only.' % (choice(adjecfuckingtives), choice(insults)))
+        except ValueError:
+            print('Generic error message')
+        except IndexError:
+            print('Generic error message')
+
+    # while True:
+    #     n = input('Choose rock (1), paper (2) or scissors (3): ')
+    #     if n in choices.keys():
+    #         return choices[n]
+    #         break
+    #     else:
+    #         print('\nInvalid %s choice, you %s. Enter 1, 2 or 3 only.' % (choice(adjecfuckingtives), choice(insults)))
 
 def pickWinner(l):
     if l[0] == l[1]:
