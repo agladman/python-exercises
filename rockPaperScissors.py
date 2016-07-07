@@ -11,12 +11,12 @@ Keep a record of the score e.g. (Player: 3 / Computer: 6)"""
 from random import randint, choice
 
 choices = { '1': 'rock', '2': 'paper', '3': 'scissors'}
-insults = ['cunt', 'motherfucker', 'wanker', 'piss stain', 'shit for brains', 'cum dumpster', 'moron', 'fucker', 'little shit', 'loser']
-exclamations = ['Shit!', 'Fuck!', 'Piss!', 'Balls!', 'Arse!']
+insults = ['cunt', 'motherfucker', 'wanker', 'piss stain', 'shit for brains', 'moron', 'fucker', 'little shit', 'loser', 'prick', 'numpty', 'jizz stain']
+exclamations = ['shit', 'fuck', 'piss', 'balls', 'arse', 'bugger', 'cunt', 'piss on my brains', 'fuck it', 'wank me sideways with a shovel']
 adjecfuckingtives = ['fucking', 'shitting', 'pissing', 'sodding', 'pigging', 'motherfucking', 'bloody']
 
 def swear(listname):
-    return choice(listname)
+        return choice(listname)
 
 def compChoose():
     n = randint(1,3)
@@ -26,12 +26,17 @@ def playerChoose():
     while True:
         try:
             n = input('Choose rock (1), paper (2) or scissors (3): ')
-            return choices[n] if n in choices
-            break
         except ValueError:
-            print('Generic error message')
-        except IndexError:
-            print('Generic error message')
+            print('I don\'t know what you did to fuck this up but don\'t {} do it again you {}'.format(swear(adjecfuckingtives), swear(insults)))
+            continue
+
+        if n not in ('1', '2', '3'):
+            print('Invalid {} choice, you {}. Enter 1, 2 or 3 only.'.format(swear(adjecfuckingtives), swear(insults)))
+            continue
+
+        else:
+            return choices[n]
+            break
 
     # while True:
     #     n = input('Choose rock (1), paper (2) or scissors (3): ')
@@ -39,7 +44,7 @@ def playerChoose():
     #         return choices[n]
     #         break
     #     else:
-    #         print('\nInvalid %s choice, you %s. Enter 1, 2 or 3 only.' % (choice(adjecfuckingtives), choice(insults)))
+    #         print('\nInvalid {} choice, you {}. Enter 1, 2 or 3 only.'.format(swear(adjecfuckingtives), swear(insults)))
 
 def pickWinner(l):
     if l[0] == l[1]:
@@ -56,24 +61,34 @@ def playRound():
     while haveWinner == False:
         a = playerChoose()
         b = compChoose()
-        print('\nYou chose %s, I chose %s %s. ' % (a, choice(adjecfuckingtives), b), end = '')
+        print('\nYou chose {}, I chose {} {}. '.format(a, swear(adjecfuckingtives), b), end = '')
         round = [a, b]
         c = pickWinner(round)
         if c == a:
-            print('%s You won!' % (choice(exclamations)))
+            print('{}! You won!'.format(swear(exclamations).capitalize()))
             winner = 'Puny Human'
             haveWinner = True
         elif c == b:
-            print('Haha! I won! Suck it, %s!' % (choice(insults)))
+            print('Haha! I won! Suck it, {}!'.format(swear(insults)))
             winner = 'Computer'
             haveWinner = True
         else:
-            print('No %s fucker won.' % (choice(adjecfuckingtives)))
+            print('No {} fucker won. Choose again, {}.'.format(swear(adjecfuckingtives), swear(insults)))
 
     return winner
 
+def giveScores(roundsPlayed, scores, isFinal=None):
+    finaliser = ''
+    finaliser = 'final ' if isFinal else finaliser
+
+    pluraliser = 's'
+    pluraliser = '' if roundsPlayed == 1 else pluraliser
+
+    print('\nAfter {} round{} the {}scores are: Puny {} Human {} / Computer {}'.format(roundsPlayed, pluraliser, finaliser, swear(adjecfuckingtives).title(), scores['Puny Human'], scores['Computer']))
+
+
 def main():
-    print('\nWelcome, Puny Human! Let us play...\n\nTHE ROCK, THE PAPER AND THE %s SCISSOOOOORS!' % (choice(adjecfuckingtives).upper()))
+    print('\nWelcome, Puny Human! Let us play...\n\nTHE ROCK, THE PAPER AND THE {} SCISS{}RS!'.format(swear(adjecfuckingtives).upper(), 'O' * randint(4,10)))
 
     # 1st round
     scores = {'Puny Human': 0, 'Computer': 0}
@@ -81,7 +96,7 @@ def main():
     scores[playRound()] += 1
     roundsPlayed += 1
 
-    print('\nAfter %i round the scores are: Puny %s Human %i / Computer %i' % (roundsPlayed, choice(adjecfuckingtives).capitalize(), scores['Puny Human'], scores['Computer']))
+    giveScores(roundsPlayed, scores)
 
     # 2nd and subsequent rounds
     while True:
@@ -90,20 +105,21 @@ def main():
         if yesNo.startswith('y'):
             scores[playRound()] += 1
             roundsPlayed += 1
-            print('\nAfter %i rounds the scores are: Puny %s Human %i / Computer %i' % (roundsPlayed, choice(adjecfuckingtives).capitalize(), scores['Puny Human'], scores['Computer']))
+            giveScores(roundsPlayed, scores)
 
         elif yesNo.startswith('n'):
-            print('\nAfter %i rounds the final %s scores are: Puny %s Human %i / Computer %i' % (roundsPlayed, choice(adjecfuckingtives), choice(adjecfuckingtives).capitalize(), scores['Puny Human'], scores['Computer']))
+            isFinal = True
+            giveScores(roundsPlayed, scores, isFinal)
             if scores['Puny Human'] > scores['Computer']:
-                print('\n%s You %s beat me! YOU %s %s! %s' % (choice(exclamations).capitalize(), choice(adjecfuckingtives), choice(adjecfuckingtives).upper(), choice(insults).upper(), choice(exclamations).upper()))
+                print('\n{}! You {} beat me! YOU {} {}! {}!'.format(swear(exclamations).capitalize(), swear(adjecfuckingtives), swear(adjecfuckingtives).upper(), swear(insults).upper(), swear(exclamations).upper()))
             elif scores['Puny Human'] == scores['Computer']:
-                print('\nFuck me, it\'s a draw. How %s dull.' % (choice(adjecfuckingtives)))
+                print('\nFuck me, it\'s a draw. How {} dull.'.format(swear(adjecfuckingtives)))
             else:
-                print('\nAAAAAAAH! I %s BEAT YOU, YOU %s! YEAH!' % (choice(adjecfuckingtives).upper(), choice(insults).upper()))
+                print('\nAAAAAAAH! I {} BEAT YOU, YOU {}! YEAH!'.format(swear(adjecfuckingtives).upper(), swear(insults).upper()))
                 print('\nYEAH!')
                 print('\n\nYEEEEEEEEEEEEEEAAAAAHHH!')
             break
         else:
-            print('\n%s, can\'t you even get a simple yes/no question right?' % (choice(insults).capitalize()))
+            print('\n{}, can\'t you even get a simple yes/no question right?'.format(swear(insults).capitalize()))
 
 main()
