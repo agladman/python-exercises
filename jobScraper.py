@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # A script to capture and count instances of job titles in sample data.
-# Next being to find names of individuals holding those jobs.
+# Next step is to find names of individuals holding those jobs.
 
-import os, re, pprint
+import os, logging, re, pprint, datetime
+logging.basicConfig(filename='../../sgmTidy-log-{::%Y%m%d-%H%M}.txt'.format(datetime.datetime.now()), level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
+logging.debug('Start of program')
 
 def get_datafile():
     while True:
@@ -12,37 +14,46 @@ def get_datafile():
                 return datafile
                 break
             else:
-                print('Gah! Check file exists in that location and try again.')
+                print('Check file exists in that location and try again.')
         except Exception as e:
-            print('Something went wrong.')
+            print('Something went wrong: {}'.format(str(e)))
+            logging.critical('Exception: {}'.format(str(e)))
 
 datafile = open(get_datafile())
-
-# with open('filename.ext') as input_file:
+logging.debug('opened {} as datafile'.format(datafile))
 
 jobtitles = {}
-jtregex = re.compile(r'>(.*?)</job>')
+jtregex = re.compile(r'<job>(.*?)</job>')
 
-for line in datafile:
+for i, line in enumerate(datafile):
     result = jtregex.findall(line)
     for item in result:
         if item not in jobtitles:
             jobtitles.setdefault(item, 0)
         jobtitles[item] += 1
+    logging.debug('jtregex on line {0}'.format(i + 1)
 
 # TODO: capture names matching each job titles
 
-"""Alternatively get the user to indicate which job titles are of
-interest and capture names that match the selection."""
+jtitles = list(jobtitles.keys()) # so that order becomes fixed
+jholders = []
 
-"""Need a regex to find similar patterns following each k in jobtitles.
-Resulting lists from re.findall stored in a list of lists? How to match to key?
-Some sort of index number taken from i as it loops through?
-And how to print it all out once it's done?"""
+for j, line in enumerate(datafile):
+    for k in titles:
+        jhregex = re.compile(r'<job>{}</job><name>(.*?)</name>'.format(re.escape(k)))
+        logging.debug('jhregex set to: {}'.format(jhregex))
+        result = jhregex.findall(line)
+        logging.debug('result: {}'.format(result))
+        jholders += result
+    logging.debug('jhregex loop on line {0}'.format(j + 1))
 
-with open('../../jobScraper-log.txt', 'w') as logfile:
-    pprint.pprint(jobtitles, logfile)
+# end TODO for capturing names
+
+with open('../../jobScraper-{:%Y%m%d-%H%M}.txt'.format(datetime.datetime.now()), 'w') as logfile:
+    # pprint.pprint(jobtitles, logfile) # commented out while I debug TODO section
+    pprint.pprint(holders, logfile)
 
 datafile.close()
 logfile.close()
 print('Script ended')
+logging.debug('End of program')
