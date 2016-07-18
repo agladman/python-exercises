@@ -108,7 +108,7 @@ class Player(object):
         self.score = 0
         self.turn = False
 
-    def setType(s):
+    def setType(s):     # not working so setting type directly in lines 135 and 144
         self.type = s
 
     def giveType():
@@ -166,7 +166,7 @@ def main():
     l = []  # this list will store the players throughout the game
     getPlayers(l)
 
-    q = list(l)  # this list stores them only until the order of play is set
+    q = list(l)  # this list controls the order of play
 
     roundsPlayed = 0
 
