@@ -1,0 +1,277 @@
+ 2016-07-18 20:21:45,552 - DEBUG - Start of program
+ 2016-07-18 20:21:56,522 - DEBUG - player1 created
+ 2016-07-18 20:22:02,163 - DEBUG - player2 created
+ 2016-07-18 20:22:02,167 - DEBUG - round 1, player is human
+ 2016-07-18 20:22:02,167 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:22:02,167 - DEBUG - secretWord: ONES
+ 2016-07-18 20:22:02,168 - DEBUG - displayWord: ____
+ 2016-07-18 20:22:05,506 - DEBUG - correct guess: E
+ 2016-07-18 20:22:05,507 - DEBUG - guessesUsed: 0 of 12
+ 2016-07-18 20:22:05,507 - DEBUG - length of secretWord: 4; lettersMatched: 1; displayWord: __E_
+ 2016-07-18 20:22:08,797 - DEBUG - incorrect guess: A
+ 2016-07-18 20:22:08,797 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:22:11,011 - DEBUG - incorrect guess: R
+ 2016-07-18 20:22:11,011 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:22:11,918 - DEBUG - incorrect guess: T
+ 2016-07-18 20:22:11,919 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:22:12,930 - DEBUG - incorrect guess: H
+ 2016-07-18 20:22:12,931 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:22:13,616 - DEBUG - correct guess: S
+ 2016-07-18 20:22:13,617 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:22:13,617 - DEBUG - length of secretWord: 4; lettersMatched: 2; displayWord: __ES
+ 2016-07-18 20:22:15,279 - DEBUG - incorrect guess: M
+ 2016-07-18 20:22:15,279 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:16,019 - DEBUG - correct guess: N
+ 2016-07-18 20:22:16,019 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:16,019 - DEBUG - length of secretWord: 4; lettersMatched: 3; displayWord: _NES
+ 2016-07-18 20:22:18,196 - DEBUG - correct guess: O
+ 2016-07-18 20:22:18,197 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:18,197 - DEBUG - length of secretWord: 4; lettersMatched: 4; displayWord: ONES
+ 2016-07-18 20:22:20,861 - DEBUG - round 2, player is computer
+ 2016-07-18 20:22:24,387 - DEBUG - secretWord: BUGGERPANTS
+ 2016-07-18 20:22:24,388 - DEBUG - displayWord: ___________
+ 2016-07-18 20:22:24,407 - DEBUG - incorrect guess: V
+ 2016-07-18 20:22:24,407 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:22:24,427 - DEBUG - incorrect guess: M
+ 2016-07-18 20:22:24,427 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:22:24,446 - DEBUG - incorrect guess: L
+ 2016-07-18 20:22:24,446 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:22:24,472 - DEBUG - incorrect guess: J
+ 2016-07-18 20:22:24,473 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:22:24,493 - DEBUG - incorrect guess: Z
+ 2016-07-18 20:22:24,493 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:24,512 - DEBUG - correct guess: S
+ 2016-07-18 20:22:24,512 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:24,512 - DEBUG - length of secretWord: 11; lettersMatched: 1; displayWord: __________S
+ 2016-07-18 20:22:24,525 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,525 - DEBUG - correct guess: B
+ 2016-07-18 20:22:24,525 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:24,525 - DEBUG - length of secretWord: 11; lettersMatched: 2; displayWord: B_________S
+ 2016-07-18 20:22:24,534 - DEBUG - correct guess: G
+ 2016-07-18 20:22:24,535 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:24,535 - DEBUG - length of secretWord: 11; lettersMatched: 3; displayWord: B_G_______S
+ 2016-07-18 20:22:24,535 - DEBUG - correct guess: G
+ 2016-07-18 20:22:24,535 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:24,535 - DEBUG - length of secretWord: 11; lettersMatched: 4; displayWord: B_GG______S
+ 2016-07-18 20:22:24,545 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,545 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,545 - DEBUG - correct guess: R
+ 2016-07-18 20:22:24,545 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:24,545 - DEBUG - length of secretWord: 11; lettersMatched: 5; displayWord: B_GG_R____S
+ 2016-07-18 20:22:24,555 - DEBUG - incorrect guess: Q
+ 2016-07-18 20:22:24,555 - DEBUG - guessesUsed: 6 of 12
+ 2016-07-18 20:22:24,565 - DEBUG - incorrect guess: O
+ 2016-07-18 20:22:24,566 - DEBUG - guessesUsed: 7 of 12
+ 2016-07-18 20:22:24,576 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,577 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,577 - DEBUG - incorrect guess: X
+ 2016-07-18 20:22:24,577 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:22:24,587 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,587 - DEBUG - correct guess: N
+ 2016-07-18 20:22:24,587 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:22:24,587 - DEBUG - length of secretWord: 11; lettersMatched: 6; displayWord: B_GG_R__N_S
+ 2016-07-18 20:22:24,597 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,597 - DEBUG - correct guess: E
+ 2016-07-18 20:22:24,597 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:22:24,597 - DEBUG - length of secretWord: 11; lettersMatched: 7; displayWord: B_GGER__N_S
+ 2016-07-18 20:22:24,608 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,608 - DEBUG - correct guess: A
+ 2016-07-18 20:22:24,608 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:22:24,608 - DEBUG - length of secretWord: 11; lettersMatched: 8; displayWord: B_GGER_AN_S
+ 2016-07-18 20:22:24,617 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,617 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,617 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,617 - DEBUG - correct guess: U
+ 2016-07-18 20:22:24,617 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:22:24,617 - DEBUG - length of secretWord: 11; lettersMatched: 9; displayWord: BUGGER_AN_S
+ 2016-07-18 20:22:24,629 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,629 - DEBUG - incorrect guess: K
+ 2016-07-18 20:22:24,629 - DEBUG - guessesUsed: 9 of 12
+ 2016-07-18 20:22:24,641 - DEBUG - incorrect guess: D
+ 2016-07-18 20:22:24,641 - DEBUG - guessesUsed: 10 of 12
+ 2016-07-18 20:22:24,650 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:24,650 - DEBUG - incorrect guess: I
+ 2016-07-18 20:22:24,650 - DEBUG - guessesUsed: 11 of 12
+ 2016-07-18 20:22:24,662 - DEBUG - incorrect guess: Y
+ 2016-07-18 20:22:24,662 - DEBUG - guessesUsed: 12 of 12
+ 2016-07-18 20:22:24,678 - DEBUG - maxGuesses reached
+ 2016-07-18 20:22:28,775 - DEBUG - round 3, player is human
+ 2016-07-18 20:22:28,775 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:22:28,775 - DEBUG - secretWord: WITH
+ 2016-07-18 20:22:28,776 - DEBUG - displayWord: ____
+ 2016-07-18 20:22:31,447 - DEBUG - correct guess: T
+ 2016-07-18 20:22:31,447 - DEBUG - guessesUsed: 0 of 12
+ 2016-07-18 20:22:31,447 - DEBUG - length of secretWord: 4; lettersMatched: 1; displayWord: __T_
+ 2016-07-18 20:22:33,751 - DEBUG - incorrect guess: S
+ 2016-07-18 20:22:33,751 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:22:35,640 - DEBUG - incorrect guess: E
+ 2016-07-18 20:22:35,641 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:22:36,603 - DEBUG - correct guess: I
+ 2016-07-18 20:22:36,604 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:22:36,604 - DEBUG - length of secretWord: 4; lettersMatched: 2; displayWord: _IT_
+ 2016-07-18 20:22:36,992 - DEBUG - incorrect guess: O
+ 2016-07-18 20:22:36,993 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:22:40,709 - DEBUG - duplicate guess by human
+ 2016-07-18 20:22:43,536 - DEBUG - correct guess: W
+ 2016-07-18 20:22:43,536 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:22:43,537 - DEBUG - length of secretWord: 4; lettersMatched: 3; displayWord: WIT_
+ 2016-07-18 20:22:45,057 - DEBUG - correct guess: H
+ 2016-07-18 20:22:45,057 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:22:45,057 - DEBUG - length of secretWord: 4; lettersMatched: 4; displayWord: WITH
+ 2016-07-18 20:22:46,779 - DEBUG - round 4, player is computer
+ 2016-07-18 20:22:49,460 - DEBUG - secretWord: MONKEY
+ 2016-07-18 20:22:49,461 - DEBUG - displayWord: ______
+ 2016-07-18 20:22:49,475 - DEBUG - correct guess: Y
+ 2016-07-18 20:22:49,476 - DEBUG - guessesUsed: 0 of 12
+ 2016-07-18 20:22:49,476 - DEBUG - length of secretWord: 6; lettersMatched: 1; displayWord: _____Y
+ 2016-07-18 20:22:49,498 - DEBUG - incorrect guess: H
+ 2016-07-18 20:22:49,499 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:22:49,520 - DEBUG - incorrect guess: Z
+ 2016-07-18 20:22:49,520 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:22:49,541 - DEBUG - incorrect guess: A
+ 2016-07-18 20:22:49,542 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:22:49,563 - DEBUG - incorrect guess: W
+ 2016-07-18 20:22:49,564 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:22:49,584 - DEBUG - incorrect guess: I
+ 2016-07-18 20:22:49,584 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:49,602 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,602 - DEBUG - correct guess: K
+ 2016-07-18 20:22:49,602 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:22:49,602 - DEBUG - length of secretWord: 6; lettersMatched: 2; displayWord: ___K_Y
+ 2016-07-18 20:22:49,614 - DEBUG - incorrect guess: T
+ 2016-07-18 20:22:49,614 - DEBUG - guessesUsed: 6 of 12
+ 2016-07-18 20:22:49,623 - DEBUG - incorrect guess: U
+ 2016-07-18 20:22:49,623 - DEBUG - guessesUsed: 7 of 12
+ 2016-07-18 20:22:49,634 - DEBUG - incorrect guess: R
+ 2016-07-18 20:22:49,634 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:22:49,645 - DEBUG - incorrect guess: G
+ 2016-07-18 20:22:49,645 - DEBUG - guessesUsed: 9 of 12
+ 2016-07-18 20:22:49,654 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,654 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,654 - DEBUG - incorrect guess: P
+ 2016-07-18 20:22:49,654 - DEBUG - guessesUsed: 10 of 12
+ 2016-07-18 20:22:49,665 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,665 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,665 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,665 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,666 - DEBUG - incorrect guess: L
+ 2016-07-18 20:22:49,666 - DEBUG - guessesUsed: 11 of 12
+ 2016-07-18 20:22:49,675 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:22:49,675 - DEBUG - incorrect guess: C
+ 2016-07-18 20:22:49,675 - DEBUG - guessesUsed: 12 of 12
+ 2016-07-18 20:22:49,690 - DEBUG - maxGuesses reached
+ 2016-07-18 20:22:56,190 - DEBUG - round 5, player is human
+ 2016-07-18 20:22:56,190 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:22:56,190 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:22:56,191 - DEBUG - secretWord: THAT
+ 2016-07-18 20:22:56,191 - DEBUG - displayWord: ____
+ 2016-07-18 20:22:59,162 - DEBUG - incorrect guess: Y
+ 2016-07-18 20:22:59,162 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:23:00,981 - DEBUG - incorrect guess: G
+ 2016-07-18 20:23:00,981 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:23:01,950 - DEBUG - incorrect guess: O
+ 2016-07-18 20:23:01,951 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:23:02,385 - DEBUG - incorrect guess: I
+ 2016-07-18 20:23:02,385 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:23:02,883 - DEBUG - incorrect guess: U
+ 2016-07-18 20:23:02,883 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:23:03,752 - DEBUG - incorrect guess: E
+ 2016-07-18 20:23:03,752 - DEBUG - guessesUsed: 6 of 12
+ 2016-07-18 20:23:04,082 - DEBUG - correct guess: A
+ 2016-07-18 20:23:04,082 - DEBUG - guessesUsed: 6 of 12
+ 2016-07-18 20:23:04,082 - DEBUG - length of secretWord: 4; lettersMatched: 1; displayWord: __A_
+ 2016-07-18 20:23:05,141 - DEBUG - incorrect guess: R
+ 2016-07-18 20:23:05,141 - DEBUG - guessesUsed: 7 of 12
+ 2016-07-18 20:23:05,841 - DEBUG - incorrect guess: S
+ 2016-07-18 20:23:05,841 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:23:07,101 - DEBUG - correct guess: H
+ 2016-07-18 20:23:07,102 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:23:07,102 - DEBUG - length of secretWord: 4; lettersMatched: 2; displayWord: _HA_
+ 2016-07-18 20:23:09,363 - DEBUG - rejected non-alpha guess by human
+ 2016-07-18 20:23:10,425 - DEBUG - correct guess: T
+ 2016-07-18 20:23:10,425 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:23:10,425 - DEBUG - length of secretWord: 4; lettersMatched: 3; displayWord: THA_
+ 2016-07-18 20:23:10,425 - DEBUG - correct guess: T
+ 2016-07-18 20:23:10,426 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:23:10,426 - DEBUG - length of secretWord: 4; lettersMatched: 4; displayWord: THAT
+ 2016-07-18 20:23:12,485 - DEBUG - round 6, player is computer
+ 2016-07-18 20:23:14,262 - DEBUG - secretWord: FUCK
+ 2016-07-18 20:23:14,262 - DEBUG - displayWord: ____
+ 2016-07-18 20:23:14,279 - DEBUG - incorrect guess: T
+ 2016-07-18 20:23:14,279 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:23:14,300 - DEBUG - correct guess: F
+ 2016-07-18 20:23:14,301 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:23:14,301 - DEBUG - length of secretWord: 4; lettersMatched: 1; displayWord: F___
+ 2016-07-18 20:23:14,321 - DEBUG - incorrect guess: J
+ 2016-07-18 20:23:14,321 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:23:14,337 - DEBUG - incorrect guess: I
+ 2016-07-18 20:23:14,337 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:23:14,348 - DEBUG - incorrect guess: D
+ 2016-07-18 20:23:14,348 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:23:14,361 - DEBUG - incorrect guess: Y
+ 2016-07-18 20:23:14,361 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:23:14,373 - DEBUG - incorrect guess: S
+ 2016-07-18 20:23:14,373 - DEBUG - guessesUsed: 6 of 12
+ 2016-07-18 20:23:14,383 - DEBUG - incorrect guess: H
+ 2016-07-18 20:23:14,383 - DEBUG - guessesUsed: 7 of 12
+ 2016-07-18 20:23:14,394 - DEBUG - incorrect guess: P
+ 2016-07-18 20:23:14,394 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:23:14,405 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:23:14,405 - DEBUG - incorrect guess: L
+ 2016-07-18 20:23:14,405 - DEBUG - guessesUsed: 9 of 12
+ 2016-07-18 20:23:14,415 - DEBUG - incorrect guess: M
+ 2016-07-18 20:23:14,415 - DEBUG - guessesUsed: 10 of 12
+ 2016-07-18 20:23:14,426 - DEBUG - duplicate guess by computer
+ 2016-07-18 20:23:14,426 - DEBUG - incorrect guess: E
+ 2016-07-18 20:23:14,426 - DEBUG - guessesUsed: 11 of 12
+ 2016-07-18 20:23:14,437 - DEBUG - incorrect guess: R
+ 2016-07-18 20:23:14,437 - DEBUG - guessesUsed: 12 of 12
+ 2016-07-18 20:23:14,450 - DEBUG - maxGuesses reached
+ 2016-07-18 20:23:17,281 - DEBUG - round 7, player is human
+ 2016-07-18 20:23:17,281 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:23:17,281 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:23:17,281 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:23:17,281 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:23:17,282 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:23:17,282 - DEBUG - candidate word from computer was too short.
+ 2016-07-18 20:23:17,282 - DEBUG - secretWord: WOULD
+ 2016-07-18 20:23:17,282 - DEBUG - displayWord: _____
+ 2016-07-18 20:23:19,206 - DEBUG - incorrect guess: P
+ 2016-07-18 20:23:19,206 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:23:20,290 - DEBUG - correct guess: O
+ 2016-07-18 20:23:20,290 - DEBUG - guessesUsed: 1 of 12
+ 2016-07-18 20:23:20,291 - DEBUG - length of secretWord: 5; lettersMatched: 1; displayWord: _O___
+ 2016-07-18 20:23:20,818 - DEBUG - incorrect guess: I
+ 2016-07-18 20:23:20,819 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:23:21,127 - DEBUG - correct guess: U
+ 2016-07-18 20:23:21,128 - DEBUG - guessesUsed: 2 of 12
+ 2016-07-18 20:23:21,128 - DEBUG - length of secretWord: 5; lettersMatched: 2; displayWord: _OU__
+ 2016-07-18 20:23:22,547 - DEBUG - incorrect guess: R
+ 2016-07-18 20:23:22,547 - DEBUG - guessesUsed: 3 of 12
+ 2016-07-18 20:23:22,860 - DEBUG - incorrect guess: E
+ 2016-07-18 20:23:22,861 - DEBUG - guessesUsed: 4 of 12
+ 2016-07-18 20:23:23,180 - DEBUG - incorrect guess: S
+ 2016-07-18 20:23:23,180 - DEBUG - guessesUsed: 5 of 12
+ 2016-07-18 20:23:24,393 - DEBUG - incorrect guess: T
+ 2016-07-18 20:23:24,393 - DEBUG - guessesUsed: 6 of 12
+ 2016-07-18 20:23:25,002 - DEBUG - incorrect guess: A
+ 2016-07-18 20:23:25,003 - DEBUG - guessesUsed: 7 of 12
+ 2016-07-18 20:23:26,089 - DEBUG - duplicate guess by human
+ 2016-07-18 20:23:27,487 - DEBUG - incorrect guess: N
+ 2016-07-18 20:23:27,488 - DEBUG - guessesUsed: 8 of 12
+ 2016-07-18 20:23:27,880 - DEBUG - incorrect guess: M
+ 2016-07-18 20:23:27,880 - DEBUG - guessesUsed: 9 of 12
+ 2016-07-18 20:23:29,889 - DEBUG - correct guess: L
+ 2016-07-18 20:23:29,889 - DEBUG - guessesUsed: 9 of 12
+ 2016-07-18 20:23:29,889 - DEBUG - length of secretWord: 5; lettersMatched: 3; displayWord: _OUL_
+ 2016-07-18 20:23:31,788 - DEBUG - incorrect guess: G
+ 2016-07-18 20:23:31,789 - DEBUG - guessesUsed: 10 of 12
+ 2016-07-18 20:23:33,296 - DEBUG - incorrect guess: H
+ 2016-07-18 20:23:33,296 - DEBUG - guessesUsed: 11 of 12
+ 2016-07-18 20:23:35,706 - DEBUG - correct guess: D
+ 2016-07-18 20:23:35,707 - DEBUG - guessesUsed: 11 of 12
+ 2016-07-18 20:23:35,707 - DEBUG - length of secretWord: 5; lettersMatched: 4; displayWord: _OULD
+ 2016-07-18 20:23:37,467 - DEBUG - correct guess: W
+ 2016-07-18 20:23:37,468 - DEBUG - guessesUsed: 11 of 12
+ 2016-07-18 20:23:37,468 - DEBUG - length of secretWord: 5; lettersMatched: 5; displayWord: WOULD
+ 2016-07-18 20:24:04,211 - DEBUG - End of program

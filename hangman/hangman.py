@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 
-"""Having a go at a very basic hangman program. No gui or anything.
-    bug: checkWin does not seem to kick in when the word is guessed.
-"""
+"""A basic hangman program with the following features:
+    1. human plays against the computer
+    2. human and computer take turns to choose or guess words
+    3. program keeps score of words guessed by each player
+    4. user can choose whether to continue after each round played
+    """
 import datetime
 import logging
 import random
 
 logging.basicConfig(filename='hangman-{:%Y%m%d-%H%M}.txt'.format(datetime.datetime.now()), level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 logging.debug('Start of program')
-# logging.disable(logging.CRITICAL) # comment out this line to enable logging again
+logging.disable(logging.CRITICAL) # comment out this line to enable logging again
 
 # loads words into memory for computer to choose from
 with open('words.txt', 'r') as f:
@@ -76,15 +79,10 @@ class Round(object):
 
 
     def checkWin(self):
-        """This does not seem to be working at the moment.
-            Not sure if the problem lies in the function itself or in where or how it is being called.
-            Possible methods for checking win:
-                1. self.lettersMatched == len(self.secretWord) - didn't seem to work
-                2. self.displayWord == self.secretWord - testing now
-                3. self.secretWord in guessed - not tried yet, would need to pass guessed to the function
-            """
         if self.displayWord == self.secretWord:
             self.won = True
+            logging.debug('word guessed')
+        return self.won
 
 
     def guess(self, ch):
@@ -147,6 +145,7 @@ class Round(object):
                             pass
             elif self.checkWin():
                 print('Someone won - change this message later to make it better.')
+                self.player.scorePoint()
                 break
         if self.getGuessesLeft() == 0:
             print('Ran out of guesses guv.\nThe Word was {0}'.format(self.secretWord))
@@ -205,13 +204,13 @@ def doRound(i, player):
     i = Round(player)
     i.start()
     i.play()
-    if i.checkWin:
-        player.scorePoint
 
 
 def getScores(l):
+    logging.debug('scores displayed; ', end='')
     for obj in l:
         print(obj)
+        logging.debug('{0}: {1}'.format(obj.type, obj.score), end='')
 
 
 def main():
@@ -228,11 +227,9 @@ def main():
 
     print('The first player will be {0}'.format(playerNow.name))
     roundsPlayed += 1
-    # playerNow.setTurn
     doRound(roundsPlayed, playerNow)
     print('Here are the scores after round {0}:'.format(roundsPlayed))
     getScores(l)
-    # playerNow.unsetTurn
     q.append(playerNow) # player whose turn has just ended is now at q(1)
 
     while True:
@@ -242,12 +239,10 @@ def main():
                 # play more rounds
                 roundsPlayed += 1
                 playerNow = q.pop(0)
-                # playerNow.setTurn
                 doRound(roundsPlayed, playerNow)
                 print('Here are the scores after round {0}:'.format(roundsPlayed))
                 getScores(l)
-                # playerNow.unsetTurn
-                q.append(playerNow) # now at q(1)
+                q.append(playerNow) # player whose turn has just ended is now at q(1)
 
             elif ui in ('n', 'no'):
                 break
