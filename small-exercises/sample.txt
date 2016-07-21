@@ -1,0 +1,8 @@
+This is a file that contains some words. Random ones that can be looped over, analysed, whatever. And another thing is that at the moment it isn't really long enough so I expect there to be very few repeated words at the moment. The more I write the more will become repeated. Repetition is going to happen in this file of random words. Then, when it is looped over by some program or other, perhaps a decent amount of words will be available for the program to work on.
+
+And another thing is that there needs to be a few lines in here.
+
+Soft wrap just has things as one line even though it looks like lots of lines.
+And even now there are only six. How many is that. It's one more than five. One less than six. So there.
+
+Bum.
