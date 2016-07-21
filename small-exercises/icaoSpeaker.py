@@ -42,7 +42,7 @@ def speak_ICAO(text, pause1, pause2):
     for ch in text.lower():
         if ch in (' \n'):
             output.append(wordstring)
-            wordstring = []             # reset to start building next wordstring
+            pass
         elif ch not in icaoDict.keys():
             pass
         else:
