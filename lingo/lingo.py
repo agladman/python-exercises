@@ -23,7 +23,6 @@
     Clue: [t][i][g][e][r]
     """
 
-import os
 import random
 
 with open('words.txt', 'r') as f:
@@ -47,24 +46,43 @@ class LingoRound(object):
             if len(candidate) == 5:
                 self.secretWord = candidate
                 break
-            else:
-                # logging.debug('candidate word from computer was too short.')
-                pass
 
+    # script runs but won't get matches properly, problem within this function?
     def guess(self, word):
+        """This function puts a copy of the guess into a list so that
+        characters within it can be substituted. Then it loops over the
+        guess comparing each character with the secret word. If the
+        character is present in the secret word then the function checks
+        whether its position matches. Substitutions in the chars list
+        are then made accordingly, with characters not found in the
+        secret word left unchanged. Finally the contents of the chars
+        list are put into a string that returned.
+
+        At the same time it keeps a record of the number of characters
+        that are full matches - the right letter in the right position -
+        and if this reaches 5 (the length of the secret word) the
+        conditions for winning the round are met and the self.won
+        variable is set to True. This part is not returned. Perhaps it
+        should be?
+        """
         chars = list(word)
         matched = 0
-        for ch in word:
+        for i, ch in enumerate(word):
             if ch in self.secret_word:
                 if word.index(ch) == self.secret_word.index(ch):
-                    chars[word.index(ch)] = '[{0}]'.format(ch)
+                    chars[i] = '[{0}]'.format(ch)
                     matched += 1
+
+                    """what if the letter occurs more than once in the
+                    secret word? Perhaps use something like:
+                    found = [i for i, ltr in enumerate(self.secretWord)
+                        if ltr == ch]
+                        for i in found:
+                        """
                 else:
-                    i = chars.index(ch)
                     chars[i] = '({0})'.format(ch)
         output = ''.join(chars)
-        # could use len(self.secretWord) below but we know explicit value will
-        # be 5
+        # could use len(self.secretWord) below but we know explicit value is 5
         if matched == 5:
             self.won = True
         return output
@@ -139,7 +157,7 @@ def playRound(roundnum, player):
 print('\n\nWelcome to Lingo!\n\n')
 
 while True:
-    ui=input('Would you like to read the rules? ').strip().lower()
+    ui = input('Would you like to read the rules? ').strip().lower()
     if ui in ('y', 'yes'):
         showRules()
         break
@@ -149,19 +167,19 @@ while True:
         print('Please enter yes or no.')
 
 while True:
-    ui=input('What\'s your name? ').strip().title()
+    ui = input('What\'s your name? ').strip().title()
     if ui:
-        player=Player(ui)
+        player = Player(ui)
         break
     else:
-        Print('Go on, tell me your name.')
+        print('Go on, tell me your name.')
 
-i=1
+i = 1
 playRound(i, player)
 getScores(player)
 
 while True:
-    ui=input('\nPlay again? ').strip().lower()
+    ui = input('\nPlay again? ').strip().lower()
     if ui in ('y', 'yes'):
         i += 1
         playRound(i, player)
