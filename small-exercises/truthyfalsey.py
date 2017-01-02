@@ -7,9 +7,9 @@ class DummyClass(object):
 
 
 def truthyfalsey(i, v):
-    """Evaluates empty variable v against different comparisons to True and False."""
-    elist = "None True False '' [] () 0 0.0 foo bar baz qux".split()
-    print(f'{i + 1}: x is {elist[i]}; if triggers: ', end='')
+    """Evaluates variable v against different comparisons to True and False."""
+    vlist = "None True False '' [] () 0 0.0 foo bar baz qux".split()
+    print(f'{i + 1}: x is {vlist[i]}; if triggers: ', end='')
     iflist = []
     if v:
         iflist.append('A')
