@@ -2,7 +2,7 @@
 """Like Knifey-Spooney, only more Boolean."""
 
 def truthyfalsey(i, v):
-    elist = "None True False '' [] ()".split()
+    elist = "None True False '' [] () 0 0.0".split()
     print(f'{i + 1}: x is {elist[i]}. If triggers: ', end='')
     iflist = []
     if v:
@@ -38,14 +38,19 @@ def truthyfalsey(i, v):
         # iflist.append('if x is not True')
         iflist.append('H')
     ifstring = ', '.join([x for x in iflist])
-    print(f'{ifstring}.', end = '')
+    print(f'{ifstring}; ', end = '')
     try:
-        print(f' len(x): {len(v)}')
+        print(f'bool(x): {bool(v)}; ', end='')
     except Exception as e:
-        print(f' len(x): {e}')
+        print(f'bool(x): {e}; ', end='')
+        pass
+    try:
+        print(f'len(x): {len(v)}')
+    except Exception as e:
+        print(f'len(x): {e}')
         pass
 
-empties = [None, True, False, '', [], ()]
+empties = [None, True, False, '', [], (), 0, 0.0]
 print("""
 If evaluation statements:
     A) if x,
