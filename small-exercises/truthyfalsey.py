@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Like Knifey-Spooney, only more Boolean."""
+"""Like Knifey-Spoony, only more Boolean."""
 
 
 class DummyClass(object):
@@ -42,7 +42,7 @@ def truthyfalsey(i, v):
 
 foo, bar, baz, qux = ('eggs', True, False, DummyClass())
 myvars = [None, True, False, '', [], (), 0, 0.0, foo, bar, baz, qux]
-print(f"Empty vars tested: None, True, False, '', [], (), 0, 0.0")
+print("Empty vars tested: None, True, False, '', [], (), 0, 0.0")
 print(f'Non-empty vars tested: foo = {foo}, bar = {bar}, baz = {baz}, qux = {qux}')
 print("""
 If evaluation statements:
