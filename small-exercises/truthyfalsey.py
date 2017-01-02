@@ -37,7 +37,7 @@ def truthyfalsey(i, v):
 
 foo, bar, baz = ('qux', True, False)
 myvars = [None, True, False, '', [], (), 0, 0.0, foo, bar, baz]
-print(f'Empty vars tested: None, True, False, '', [], (), 0, 0.0')
+print(f"Empty vars tested: None, True, False, '', [], (), 0, 0.0")
 print(f'Non-empty vars tested: foo = {foo}, bar = {bar}, baz = {baz}')
 print("""
 If evaluation statements:
