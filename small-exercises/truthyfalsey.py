@@ -3,7 +3,7 @@
 
 def truthyfalsey(i, v):
     """Evaluates empty variable v against different comparisons to True and False."""
-    elist = "None True False '' [] () 0 0.0".split()
+    elist = "None True False '' [] () 0 0.0 foo bar baz".split()
     print(f'{i + 1}: x is {elist[i]}; if triggers: ', end='')
     iflist = []
     if v:
@@ -35,7 +35,10 @@ def truthyfalsey(i, v):
         print(f'len(x): {e}')
         pass
 
-empties = [None, True, False, '', [], (), 0, 0.0]
+foo, bar, baz = ('qux', True, False)
+myvars = [None, True, False, '', [], (), 0, 0.0, foo, bar, baz]
+print(f'Empty vars tested: None, True, False, '', [], (), 0, 0.0')
+print(f'Non-empty vars tested: foo = {foo}, bar = {bar}, baz = {baz}')
 print("""
 If evaluation statements:
     A) if x,
@@ -47,5 +50,5 @@ If evaluation statements:
     G) if x is not False,
     H) if x is not True
     """)
-for i, v in enumerate(empties):
+for i, v in enumerate(myvars):
     truthyfalsey(i, v)
