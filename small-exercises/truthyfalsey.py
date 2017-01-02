@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Like Knifey-Spooney, only more Boolean."""
 
+
+class DummyClass(object):
+    pass
+
+
 def truthyfalsey(i, v):
     """Evaluates empty variable v against different comparisons to True and False."""
-    elist = "None True False '' [] () 0 0.0 foo bar baz".split()
+    elist = "None True False '' [] () 0 0.0 foo bar baz DummyClass()".split()
     print(f'{i + 1}: x is {elist[i]}; if triggers: ', end='')
     iflist = []
     if v:
@@ -35,8 +40,8 @@ def truthyfalsey(i, v):
         print(f'len(x): {e}')
         pass
 
-foo, bar, baz = ('qux', True, False)
-myvars = [None, True, False, '', [], (), 0, 0.0, foo, bar, baz]
+foo, bar, baz, qux = ('eggs', True, False, DummyClass())
+myvars = [None, True, False, '', [], (), 0, 0.0, foo, bar, baz, qux]
 print(f"Empty vars tested: None, True, False, '', [], (), 0, 0.0")
 print(f'Non-empty vars tested: foo = {foo}, bar = {bar}, baz = {baz}')
 print("""
