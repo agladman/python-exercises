@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """You must make a rock paper scissors game
 Goal
 Ask the player if they pick rock paper or scissors
