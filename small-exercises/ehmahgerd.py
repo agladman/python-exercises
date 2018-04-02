@@ -36,25 +36,39 @@ class Word:
             Example: 'they' becomes 'therr', or actually 'derr' - see aslo initial_th_to_d().
             """
         if self._text.endswith('ery'):
-        	self._text = ''.join(self._text[:-1] + 'r')
+            self._text = ''.join(self._text[:-1] + 'r')
         if len(self) >= 2 and self._text[-1] == 'y' and self._text[-2] not in self._vowels:
-        	self._text = ''.join(self._text[:-1] + 'ah')
+            self._text = ''.join(self._text[:-1] + 'ah')
 
     def concatenate_multiple_vowels(self):
         """Where two or more vowels are grouped together, remove all but the last vowels."""
-        letters = []
-        letters.append(self._text[0])
-        for i, ch in enumerate(self._text[1:]):
-            if ch in self._vowels and self._text[i - 1] in self._vowels:
-                pass
-            else:
-                letters.append(ch)
-        self._text = ''.join(l for l in letters)
+
+        def my_inner_func(self):
+            vowels = set('aeiou')
+            words = self._text.split()
+            for word in words:
+                letters = []
+                for ch in word:
+                    if len(letters) == 0:
+                        letters.append(ch)
+                    else:
+                        if ch not in vowels:
+                            letters.append(ch)
+                        if ch in vowels and letters[-1] not in vowels:
+                            letters.append(ch)
+                        else:
+                            pass
+                for l in letters:
+                    yield l
+                yield ' '
+        
+        self._text = ''.join(my_inner_func(self)).rstrip(' ')
+
 
     def vowels_to_er(self):
         """Changes vowels to 'er' but skips 'e' at the end of words."""
         if self._text[-1] == 'e':
-        	self._text = re.sub(r'[aeiou]', 'er', self._text[:-1]) + 'e'
+            self._text = re.sub(r'[aeiou]', 'er', self._text[:-1]) + 'e'
         else:
             self._text = re.sub(r'[aeiou]', 'er', self._text)
 
@@ -71,6 +85,42 @@ def test():
     print(convert_to_stupid(input('Enter text: ')))
 
 
+# def vowels(my_string):
+#     vowels = set('aeiou')
+#     for idx, ch in enumerate(my_string):
+#         if ch not in vowels:
+#             yield ch
+#         else:
+#             if my_string[idx - 1] in vowels:
+#                 pass
+#             else:
+#                 yield c
+
+
+# def vowels2(my_string):
+#     vowels = set('aeiou')
+#     words = my_string.split()
+#     for word in words:
+#         letters = []
+#         for ch in word:
+#             if len(letters) == 0:
+#                 letters.append(ch)
+#             else:
+#                 if ch not in vowels:
+#                     letters.append(ch)
+#                 if ch in vowels and letters[-1] not in vowels:
+#                     letters.append(ch)
+#                 else:
+#                     pass
+#         for l in letters:
+#             yield l
+
+#         yield ' '
+
+
+# def vv():
+#     return ''.join(vowels2(input('text: '))).rstrip(' ')
+
+
 if __name__ == '__main__':
     test()
-
