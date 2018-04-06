@@ -1,13 +1,12 @@
 # Write a function that returns the largest element in a list.
 
-list = ['apples', 'mandarins', 'grapes', 'pears', 'bananas']
+mylist = ['apples', 'mandarins', 'grapes', 'pears', 'bananas']
 
-def biggestOne(list):
+def find_biggest(mylist):
     biggest = ''
-    for item in list:
+    for item in mylist:
         if len(item) > len(biggest):
             biggest = item
-
     return biggest
 
-print(biggestOne(list))
+print(find_biggest(mylist))
