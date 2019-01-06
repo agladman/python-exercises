@@ -40,7 +40,7 @@ class Session():
         new_count = self._count + other._count
         new_heads = self._heads + other._heads
         new_tails = self._tails + other._tails
-        return (new_flips, new_count, new_heads, new_tails)
+        return new_flips, new_count, new_heads, new_tails
 
     def flip(self):
         result = choice([True, False])
