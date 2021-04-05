@@ -17,5 +17,32 @@ def check_for_fizzbuzz(i):
     else:
         return str(i)
 
-for i in range(1, 100):
-    print(check_for_fizzbuzz(i))
+# run with the following... not great
+# for i in range(1, 100):
+#     print(check_for_fizzbuzz(i)
+#
+# let's try a better version...
+
+def fizzbuzz(num):
+    for n in range(1, num + 1):
+        fizz = "fizz" if n % 3 == 0 else ''
+        buzz = "buzz" if n % 5 == 0 else ''
+        yield f"{fizz}{buzz}".capitalize() if fizz or buzz else n
+
+def main():
+    while True:
+        try:
+            num = int(input("Enter a number: "))
+            if 0 < num < 100:
+                break
+            else:
+                print("No one likes a smartarse...")
+                continue
+        except ValueError:
+            print("That's not a number!")
+            continue
+    for n in fizzbuzz(num):
+        print(n)
+
+if __name__ == '__main__':
+    main()
