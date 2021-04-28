@@ -2,3 +2,4 @@
 .DS_Store
 rhymes/
 hangman*.txt
+wconf.py
