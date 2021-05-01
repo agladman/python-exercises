@@ -13,8 +13,13 @@ def odder(list):
             returnlist += list[i]
     return returnlist
 
+def better_odder(list):
+    "using list comp, and slicing start and step to do this in one line"
+    return [l for l in list[1::2]]
+
 print(list)
 swappit(list)
 print(list)
 
 print(odder(list))
+print(better_odder(list))

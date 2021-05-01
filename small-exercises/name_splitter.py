@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 def generate_email():
-    "generates email address for a given full name"
+    """generates email address for a given full name
+    expects at least a first and last name so wouldn't work for Cher or Madonna
+    """
     ui = input('Enter full name: ')
     first, *middle, last = ui.lower().split()
     if middle:
