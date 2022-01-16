@@ -1,3 +1,4 @@
 wconf.py
 air.log
 openweather-env
+*.db
