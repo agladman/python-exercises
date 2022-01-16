@@ -35,7 +35,7 @@ def fetch_data(coords=coords):
 	lat, lon = coords
 	try:
 		r = requests.get(f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API_key}')
-		# logger.debug(f'http response: {r.status_code}')
+		logger.debug(f'http response: {r.status_code}')
 	except Exception as e:
 		logger.error(e)
 		raise
@@ -57,10 +57,16 @@ def parse_timestamp(dt):
 	time = d.strftime('%I.%M %p')
 	return date, time
 
-if __name__ == '__main__':
+def main():
+	"fetches the latest air quality reading from openweather"
+	logger.info("running")
 	data = fetch_data()
+	# logger.debug(f"{data=}")
 	aqi = data['list'][0]['main']['aqi']
 	dt = data['list'][0]['dt']
 	aq = check_aq(aqi)
 	date, time = parse_timestamp(dt)
 	print(f'air quality at {time} on {date} is {aq.lower()}')
+
+if __name__ == '__main__':
+	main()
