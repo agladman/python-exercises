@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-"""
-Gets details of air quality from OpenWeather API_key
-"""
+"""Gets details of air quality from OpenWeather API"""
 
 from datetime import datetime
 from zoneinfo import ZoneInfo
