@@ -23,7 +23,7 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 # logging to file
-fh = logging.FileHandler(f'air.log')
+fh = logging.FileHandler('air.log')
 fh.setLevel(logging.INFO)
 fh.setFormatter(formatter)
 logger.addHandler(fh)
