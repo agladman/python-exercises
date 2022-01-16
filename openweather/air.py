@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 import logging
 import requests
 
+import database
 from wconf import API_key, coords
 
 
@@ -55,6 +56,22 @@ def parse_timestamp(dt):
 	time = d.strftime('%I.%M %p')
 	return date, time
 
+def save(dt, aqi, components):
+	"saves the data to the local database"
+	db = database.connect()
+	database.create_table(db)
+	database.add_record(db,
+		(aqi,
+		components["co"],
+		components["no"],
+		components["no2"],
+		components["o3"],
+		components["so2"],
+		components["pm10"],
+		components["pm2_5"],
+		components["nh3"],
+		dt))
+
 def main():
 	"fetches the latest air quality reading from openweather"
 	logger.info("running")
@@ -63,8 +80,10 @@ def main():
 	aqi = data['list'][0]['main']['aqi']
 	dt = data['list'][0]['dt']
 	aq = check_aq(aqi)
+	components = data['list'][0]['components']
 	date, time = parse_timestamp(dt)
 	print(f'air quality at {time} on {date} is {aq.lower()}')
+	save(dt, aqi, components)
 
 if __name__ == '__main__':
 	main()
