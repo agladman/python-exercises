@@ -1,0 +1,18 @@
+import logging
+
+# set up logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s:\t%(levelname)s:\t%(funcName)s:\t%(message)s',
+							  datefmt='%d/%m/%Y %H:%M:%S')
+# logging to console
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+ch.setFormatter(formatter)
+logger.addHandler(ch)
+
+# logging to file
+fh = logging.FileHandler(f'logs/combined.log')
+fh.setLevel(logging.INFO)
+fh.setFormatter(formatter)
+logger.addHandler(fh)

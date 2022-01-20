@@ -3,18 +3,13 @@
 
 import time
 
-def timing_func(some_func):
-
-	"""
-	Outputs the time taken to execute a function
-	"""
-
+def timing_func(fn):
+	"Outputs the time taken to execute a function"
 	def wrapper():
 		t1 = time.time()
-		some_func()
+		fn()
 		t2 = time.time()
-		return f'Time it took to run the function: {str((t2 - t1))}\n'
-
+		return f'Time it took to run the function: {(t2 - t1):.6f} seconds'
 	return wrapper
 
 @timing_func
