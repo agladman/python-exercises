@@ -25,3 +25,9 @@ Some lessons learned:
 - Pytest > unittest
 - I need to get my head around mocking
 - Writing a fleshed-out ReadMe like this one is probably a good idea too
+
+## Update January 2022
+
+- found I had not implemented the reset part of the scenario, so added that to `robonamer.py`
+- found more concise way to generate names
+- testing adds names to `names.txt` thereby removing potential valid names from the pool. It would be better if I mocked this out somehow.
