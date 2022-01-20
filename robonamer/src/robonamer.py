@@ -11,7 +11,7 @@ class Robot:
         if self.bootcount == 0:
             return f'{self.__class__} | unbooted'
         if self.bootcount > 0 and self.name is None:
-            self.generate_name()
+            self.boot()
             return f'{self.__class__} | {self.__dict__}'
         else:
             return f'{self.__class__} | {self.__dict__}'
